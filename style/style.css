@@ -17,16 +17,21 @@ body {
  padding: 0%;
  margin: 0%;
  height: 100%;
- font-family: "Arial",sans-serif;
+ font-family: "Roboto Condensed" ,"Arial",sans-serif;
  font-size: 16px;
  line-height: 1.5;
- background-color: #fff;
+ font-weight: 400;
+ background-color: #222;
  color: #222;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+*:focus {
+  outline: 2px solid #1e90ff ;
+  outline-offset: 2px;
 }
 
 /* CONTAINER */
@@ -62,6 +67,7 @@ padding-right: 50px;
   align-items: center;
   width: 100%;
   max-width: 600px;
+  padding: 24px;
   background-image: url("../img/left-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -77,15 +83,24 @@ padding-right: 50px;
   color: #fff;
 }
 .hero-heading {
+  font-family: "Bebas Neue" ,"Roboto Condensed","Arial",sans-serif;
+  font-weight: 400;
   margin-top: 0%;
   margin-bottom: 24px;
 }
 .hero-link {
+  font-family: "Bebas Neue" ,"Roboto Condensed","Arial",sans-serif;
   display: inline-block;
   background-color: #1e90ff;
   color: #fff;
   text-decoration: none;
   letter-spacing: 2px;
+}
+.hero-link:hover {
+  background-color: rgba(30, 144, 255, 0.80);
+}
+.hero-link:active {
+  background-color: rgba(30, 144, 255, 0.6);
 }
 .hero-link-inner {
   display: flex;
@@ -101,8 +116,7 @@ padding-right: 50px;
   background-position: center center;
   content: "";
 }
-.hero-link-text {
-}
+
 
 
 /* retina bg*/
@@ -116,4 +130,136 @@ only screen and (                min-resolution: 2dppx) {
  .hero {
   background-image: url("../img/left-bg@2x.png");
  }
+}
+
+
+/* LATEST VIDEOS*/
+
+.latest-videos {
+  background-color: #fff;
+  width: 100%;
+  max-width: 600px;
+  padding: 54px;
+}
+.latest-videos-heading {
+  margin-top: 0%;
+  margin-bottom: 24px;
+  font-family: "Bebas Neue","Roboto Condensed","Arial",sans-serif;
+  font-size: 24px;
+  line-height: normal;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.latest-videos-divider {
+  height: 1px;
+  border: 0;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  background-color: #999;
+}
+.latest-videos-list {
+  padding: 0%;
+  margin: 0%;
+  margin-bottom: 24px;
+  list-style-type: none;
+}
+.latest-videos-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+/* ITEM LATES VIDEOS*/
+.item-latest-videos {
+  display: flex;
+}
+.item-latest-videos-img {
+  width: 160px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.item-latest-videos-info {
+  padding: 16px;
+}
+.item-latest-videos-heading {
+  margin-top: 0%;
+  margin-bottom: 4px;
+  font-family: "Bebas Neue","Roboto Condensed","Arial",sans-serif;
+  font-size: 18px;
+  line-height: normal;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.item-latest-videos-link {
+  display: inline-block;
+  color: #222;
+  text-decoration: none;
+}
+.item-latest-videos-link:hover {
+  color: #1e90ff;
+}
+.item-latest-videos-link:active {
+  opacity: 0.6;
+}
+.item-latest-videos-meta {
+  display: flex;
+  align-items: center;
+  color: #888;
+  font-size: 14px;
+  line-height: normal;
+}
+.item-latest-videos-published-at {
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.item-latest-videos-published-at::before {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  content: "";
+  background-image: url("../img/watch.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.item-latest-videos-views {
+  display: flex;
+  align-items: center;
+}
+.item-latest-videos-views::before {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  content: "";
+  background-image: url("../img/eye.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+/* BUTTON*/
+.load-more-button {
+  display: block;
+  border: 0;
+  border-radius: 4px;
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  background-color: #1e90ff;
+  color: #fff;
+
+  cursor: pointer;
+
+}
+.load-more-button:hover {
+  background-color: rgba(30, 144, 255, 0.80);
+}
+.load-more-button:active {
+  background-color: rgba(30, 144, 255, 0.60);
 }
